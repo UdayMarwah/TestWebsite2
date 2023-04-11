@@ -180,6 +180,36 @@ dataLayer.push({
     ]
   }
 });
+dataLayer.push({ ecommerce: null });  // Clear the previous ecommerce object.
+dataLayer.push({
+  event: "purchase",
+  ecommerce: {
+      transaction_id: "123",
+      affiliation: "ABC",
+      value: 2.58,
+      tax: 0.18,
+      shipping: 0.93,
+      currency: "USD",
+      items: [
+       {
+        item_id: "456",
+        item_name: "Name",
+        coupon: 0.90,
+        discount: 2.22,
+        location_id: "Qrst",
+	index: 0
+      },
+      {
+        
+        item_id: "321",
+        item_name: "Name2",
+        coupon: 0.96,
+        discount: 2.23,
+        location_id: "Qsrtuv",
+	index: 1
+      }]
+  }
+});
 	</script>
 
     <title>Courses Page</title>
